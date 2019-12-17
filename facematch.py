@@ -1,16 +1,16 @@
 import face_recognition
 
-image_of_brother = face_recognition.load_image_file('img/known/Vassilis_Pallas.jpg')
-vassilis_face_encoding = face_recognition.face_encodings(image_of_brother)[0]
+image_of_me = face_recognition.load_image_file('img/known/Dimitris_Pallas.jpg')
+dimitris_face_encoding = face_recognition.face_encodings(image_of_me)[0]
 
-unknown_image = face_recognition.load_image_file('img/unknown/haha.jpg')
+unknown_image = face_recognition.load_image_file('img/unknown/Lazos_Karathanasis.jpg')
 unknown_face_encoding = face_recognition.face_encodings(unknown_image)[0]
 
 # Compare faces
 results = face_recognition.compare_faces(
-    [vassilis_face_encoding], unknown_face_encoding)
+    [dimitris_face_encoding], unknown_face_encoding)
 
 if results[0]:
-    print('This is vassilis')
+    print('This is Dimitris')
 else:
-    print('This is NOT vassilis')
+    print('This is NOT Dimitris')
