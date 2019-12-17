@@ -1,13 +1,13 @@
 import face_recognition
 from PIL import Image, ImageDraw
 
-image_of_brother = face_recognition.load_image_file('img/known/Dimitris_Pallas.jpg')
-vassilis_face_encoding = face_recognition.face_encodings(image_of_brother)[0]
+image_of_me = face_recognition.load_image_file('img/known/Dimitris_Pallas.jpg')
+dimitris_face_encoding = face_recognition.face_encodings(image_of_me)[0]
 
 # Create and array of encodings and names
 
 known_face_encoding = [
-    vassilis_face_encoding
+    dimitris_face_encoding
 ]
 
 known_face_name = [
